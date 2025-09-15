@@ -1,8 +1,12 @@
+// COMSC 210 | Lab 7 | Amrutha Sriprasana
+// Made w/ VSCode
+
 #include <iostream>
 #include <string>
 
 using namespace std;
 
+// reverses given array and returns pointer to reversed array
 string *reverseArray(string inputArr[], const int SIZE){
     string temp = "";
     string *arrPtr = nullptr;
@@ -16,6 +20,7 @@ string *reverseArray(string inputArr[], const int SIZE){
     return arrPtr;
 }
 
+// outputs all elements of array
 void displayArray(string outputArr[], const int SIZE){
     for (int i = 0; i < SIZE; i++){
         cout << outputArr[i] << " ";
@@ -23,6 +28,8 @@ void displayArray(string outputArr[], const int SIZE){
     cout << endl;
 }
 
+
+// outputs all elements of array, places reversed elements into new array, prints reversed array
 int main(){
     const int SIZE = 5;
     string names[] = {"Jason", "Alice", "Mark", "Penelope", "Matthew"};
