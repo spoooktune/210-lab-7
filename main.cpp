@@ -18,18 +18,18 @@ string* reverseArray(string inputArr[]){
 
 void displayArray(string outputArr[]){
     int size = sizeof(outputArr);
-    string *arrPtr = nullptr;
-    cout << "Original Array: ";
     for (int i = 0; i < size; i++){
         cout << outputArr[i] << " ";
     }
-    arrPtr = reverseArray(outputArr);
-    cout << "/n/nReversed Array: ";
-    for (int i = 0; i < size; i++){
-        cout << *(outputArr + i) << " ";
-    }
     cout << endl;
 }
-int main(){
 
+int main(){
+    string names[] = {"Jason", "Alice", "Mark", "Penelope", "Matthew"};
+    string *namesPtr = nullptr;
+    cout << "Original Array: ";
+    displayArray(names);
+    namesPtr = reverseArray(names);
+    cout << "Reversed Array: ";
+    displayArray(namesPtr);
 }
